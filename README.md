@@ -1,2 +1,2 @@
 # Snake-Game
-Replica of the Snake Game
+Use arrow keys to move around and collect food. Enjoy!
