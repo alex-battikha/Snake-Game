@@ -10,7 +10,7 @@ function setup() {
 
   frameRate(10);
 
-  food = createVector(random(width), random(height));
+  pickLocation();
 }
 
 
@@ -21,9 +21,11 @@ function draw() {
 	snake.update();
 
 	fill("#E61672")
-	rect(food.x, food.y);
+	rect(food.x, food.y, scl, scl);
 
-	snake.eat(food);
+	if(snake.eat(food)) {
+		pickLocation();
+	};
 }
 
 function keyPressed() {
